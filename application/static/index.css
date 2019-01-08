@@ -1,0 +1,60 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Futura", Helvetica, Arial, sans-serif;
+	color: #444;
+}
+
+.app-header {
+	background-color: #00FA9A;
+	height: 50px;
+	width: 100%;
+	opacity: .9;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.app-header h1.logo {
+	text-align: center;
+	margin-top: 10px;
+	font-size: 1.7em;
+	color: #00BFFF;
+	text-transform: uppercase;
+	text-shadow: -1px 0px 1px rgba(255,255,255,.8),
+    1px 0px 1px rgba(0,0,0,.8);;
+}
+
+table {
+	font-family: "Futura", Impact, Charcoal, sans-serif;
+	border-collapse: collapse;
+	width: 45%;
+	margin-top: 40px;
+}
+
+table td {
+	border: 2px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+table th {
+	border: 2px solid #dddddd;
+	text-align: center;
+	padding: 8px;}
+
+table tr:nth-child(even) {
+	background-color: #87CEFA;
+}
+
+p.description {
+	margin-top: 60px;
+	margin-left: 300px;
+	margin-right: 300px;
+	font-family: "Verdana", Helvetica, sans-serif;
+}
+
+p.version {
+	margin-top: 50px;
+	margin-left: 90%;
+	font-size: .85em;
+	font-family: "Verdana", Helvetica, sans-serif;

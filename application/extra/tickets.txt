@@ -1,0 +1,7 @@
+TO DO:
+
+// UI improvement
+	- player pics
+	- cleaner/professional priceget page
+
+

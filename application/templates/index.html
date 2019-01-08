@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>EPL Fantasy Web Scraper</title>
+<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='fplicon.ico') }}">
+</head>
+
+<body>
+	<div class="app-header">
+		<h1 class="logo"><strong>FPL Players To Transfer</strong></h1>	
+	</div>
+	
+
+	<div align="center">
+		<form class="app-form" name= "Price" method="POST" action="{{ url_for('priceget') }}">
+			<p>	
+				<div class="container" style="min-height:100% width:80%">
+					{% with messages = get_flashed_messages() %}
+						{% if messages %}
+							{% for message in messages %}
+								<div class="alert alert-danger alert-dismissible" role="alert">
+									{{ message }}
+								</div>	
+							{% endfor %}
+						{% endif %}
+					{% endwith %}
+				</div>
+			</p>
+			<label for="num">Maximum Player Price : </label>
+			<select class="drop-down" name="Price">
+				<option value="">Price</option>
+				<option value="13.5">£13.5</option>
+				<option value="13.0">£13.0</option>
+				<option value="12.5">£12.5</option>
+				<option value="12.0">£12.0</option>
+				<option value="11.5">£11.5</option>
+				<option value="11.0">£11.0</option>
+				<option value="10.5">£10.5</option>
+				<option value="10.0">£10.0</option>
+				<option value="9.5">£9.5</option>
+				<option value="9.0">£9.0</option>
+				<option value="8.5">£8.5</option>
+				<option value="8.0">£8.0</option>
+				<option value="7.5">£7.5</option>
+				<option value="7.0">£7.0</option>
+				<option value="6.5">£6.5</option>
+				<option value="6.0">£6.0</option>
+				<option value="5.5">£5.5</option>
+				<option value="6.0">£5.0</option>
+				<option value="4.5">£4.5</option>
+				<option value="4.0">£4.0</option>
+			</select>
+			<p><button class="btn btn-primary" onclick="location.href = {{ url_for('priceget') }}">Submit</button></p>
+		</form>
+		<table>
+			<tr>
+				<th>Position</th>
+				<th>Player Name</th>
+			</tr>
+			<tr>
+				<td><strong>Differential</strong></td>
+				<td><strong>{{ dif }}</strong></td>
+			</tr>
+			<tr>
+				<td><strong>Best Goalie</strong></td>
+				<td><strong>{{ gk }}</strong></td>
+			</tr>
+			<tr>
+				<td><strong>Best Defender</strong></td>
+				<td><strong>{{ df }}</strong></td>
+			</tr>
+			<tr>
+				<td><strong>Best Midfielder</strong></td>
+				<td><strong>{{ md }}</strong></td>
+			</tr>
+			<tr>
+				<td><strong>Best Forward<strong></td>
+				<td><strong>{{ fw }}</strong></td>
+			</tr>
+		</table>
+		<p class="description">
+		The __ web app uses a unique algorithm that takes into account various FPL metrics (creativity, bps, etc...) and finds the best player at every
+		position for a specific price using this algorithm. Additionally, a separate algorithm is used to find a differential player with a higher 
+		risk/reward ratio and lower ownership. The above players should generate both instant and long term returns. Enjoy!
+		</p>
+		<p class="version">V1.0</p>
+	</div>
+</body>
+
+</html>

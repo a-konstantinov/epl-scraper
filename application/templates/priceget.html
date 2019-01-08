@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Specific Price</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='fplicon.ico') }}">
+</head>
+
+<body>
+	<header class="app-header">
+		<h1 class="logo">FPL Player Data</h1>	
+	</header>
+	
+	<div align="center">
+		<p>Best Goalie For Price: {{ gk }}</p>
+		<p>Best Defender For Price: {{ df }}</p>
+		<p>Best Midfielder For Price: {{ md }}</p>
+		<p>Best Forward For Price: {{ fw }}</p>
+	
+	<a href="{{ url_for('index') }}"><button>Back</button></a>
+	</div>
+</body>
+
+</html>
