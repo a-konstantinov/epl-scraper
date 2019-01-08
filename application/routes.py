@@ -3,7 +3,6 @@ from application import app
 from application.main_scraper import TopFormGoalkeeper, TopFormDefender, TopFormMidfielder, TopFormForward, Differential 
 
 #Routes
-@app.route('/')
 @app.route('/index')
 def index():	
 	return render_template('index.html')
